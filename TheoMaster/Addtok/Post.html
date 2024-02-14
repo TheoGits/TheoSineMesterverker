@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Something</title>
+    <link rel="stylesheet" href="post.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Write Your Post</h2>
+        <form id="image-form" enctype="multipart/form-data">
+            <input type="file" id="image-upload" accept="image/*" onchange="previewImage()">
+            <img id="image-preview" src="#" alt="">
+        </form>
+        <textarea class="post-title" placeholder="Title here"></textarea>
+        <textarea class="post-Description" placeholder="Description"></textarea>
+        <button class="post-button" onclick="postContent()">Post</button>
+    </div>
+
+    <script src="post.js"></script>
+</body>
+</html>

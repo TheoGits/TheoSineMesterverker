@@ -79,16 +79,17 @@ body{
         top: 0;
         left: 0;
         z-index: 2; /* For å sikre at navigasjonsfeltet er over bildet */
-        justify-content: flex-end;
+        flex-direction: column row-reverse;
     }
     
     .box1,
     .box2,
     .box3 {
-        width: 2vh; /* Sett bredden etter behov */
-        height: 2vw; /* Sett høyden etter behov */
+        width: 1svh; /* Sett bredden etter behov */
+        height: 8svw; /* Sett høyden etter behov */
         background-color: white; /* Juster fargen etter behov */
         margin: 5px; /* Juster avstandene etter behov */
+        border-radius: 10px;
     }
     
     .navbar a img {
@@ -96,5 +97,22 @@ body{
         z-index: 1; /* For å sikre at bildet er bak navigasjonsfeltet */
     }
     
+    
+    .round-button {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%; /* Gjør knappen helt rund */
+        background-color: #007bff; /* Endre farge etter behov */
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        line-height: 60px; /* Sentrer teksten vertikalt */
+        cursor: pointer;
+    }
+
+    /* Endre hover-effekt etter behov */
+    .round-button:hover {
+        background-color: #0056b3; /* Endre farge ved hover */
+    }
 
 }
