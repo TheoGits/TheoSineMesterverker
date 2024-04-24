@@ -11,3 +11,9 @@ video{
 text{
     margin-left: 80vw;
 }
+
+h1{
+    display: flex;
+    justify-content: end;
+    align-self: flex-end;
+}
