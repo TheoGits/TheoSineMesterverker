@@ -1,0 +1,13 @@
+img{
+    height: 30%;
+    width: 30%;
+}
+
+video{
+    display: flex;
+    justify-content: flex-start;
+}
+
+text{
+    margin-left: 80vw;
+}
