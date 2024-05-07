@@ -1,0 +1,43 @@
+/* Grunnleggende stil for navbar */
+.navbar {
+    overflow: hidden;
+    background-color: #333; /* Mørk bakgrunn */
+    font-family: Arial, sans-serif; /* Skrifttype */
+}
+
+/* Lenke stiler innen navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: white; /* Hvit tekst */
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none; /* Fjerner understreking */
+}
+
+/* Lenker endrer farge når du holder musepekeren over */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black; /* Tekstfarge endres til svart */
+}
+
+img{
+    height: 80vh;
+
+}
+
+body{
+    background-color: grey;
+}
+
+.hovedbilde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
