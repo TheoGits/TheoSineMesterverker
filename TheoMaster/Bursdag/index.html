@@ -9,6 +9,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+    
     #countdown {
       font-size: 48px;
       font-weight: bold;
@@ -17,6 +18,37 @@
       justify-content: center;
       align-items: center;   
     }
+
+    .image-container {
+  position: relative;
+  width: 400px;
+  height: 300px;
+}
+
+.front-image,
+.back-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s;
+}
+
+.back-image {
+  opacity: 0;
+}
+
+.image-container:hover .front-image {
+  opacity: 0;
+}
+
+.image-container:hover .back-image {
+  opacity: 1;
+}
+
+
   </style>
 </head>
 <body>
@@ -27,6 +59,11 @@
   <a href="https://www.revolut.com/crypto/">Bitcoin</a><br><br>
   <a href="https://www.game-on.no/products/beretta-m92fs-springer-med-metal-slide">airsoft pistol</a><br><br>
   <a href="https://www.game-on.no/products/go-kuler-0-20g-6mm-airsoftkuler-5000stk">airsoft kuler</a>
+
+  <div class="image-container">
+    <img src="Images/photo_5915993124830823421_y.jpg" alt="Image 1" class="front-image">
+    <img src="Images/photo_5931412461150387386_y.jpg" alt="Image 2" class="back-image">
+  </div>
 
   <script>
     // Use constants for the target date and interval
