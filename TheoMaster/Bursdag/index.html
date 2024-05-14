@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bursdags nedtelling</title>
+  <style>
+    /* Add some basic styling to make the countdown look better */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    #countdown {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;   
+    }
+  </style>
+</head>
+<body>
+  <h1 id="countdown"></h1><br><br>
+
+  <h1>Theo sin ønskeliste:</h1>
+  <a href="https://us.soundcore.com/products/space-one-a3035011?jump=1">Soundcore space ones</a>
+
+  <script>
+    // Use constants for the target date and interval
+    const TARGET_DATE = new Date('2024-06-04T00:00:00.000Z');
+    const INTERVAL = 1000; // 1 second
+
+    // Get the countdown element
+    const countdownElement = document.getElementById('countdown');
+
+    // Create a function to format the time difference
+    function formatTimeDiff(timeDiff) {
+      const days = Math.floor(timeDiff / (1000 * 3600 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 3600 * 24)) / (1000 * 3600));
+      const minutes = Math.floor((timeDiff % (1000 * 3600)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      return `dager: ${days}, timer: ${hours}, minutter: ${minutes}, sekunder: ${seconds}`;
+    }
+
+    // Create a function to update the countdown
+    function updateCountdown() {
+      const now = new Date();
+      const timeDiff = TARGET_DATE - now;
+      if (timeDiff <= 0) {
+        countdownElement.textContent = 'Countdown Over!';
+        clearInterval(countdownInterval);
+      } else {
+        countdownElement.textContent = formatTimeDiff(timeDiff);
+      }
+    }
+
+    // Create the interval
+    let countdownInterval = setInterval(updateCountdown, INTERVAL);
+  </script>
+</body>
+</html>

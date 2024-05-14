@@ -22,31 +22,45 @@
 }
 
 img{
-    height: 80vh;
+    height: 50vh;
 
 }
 
 body{
-    background-color: grey;
+    background-image: url('https://images.pond5.com/low-aerial-drone-flying-over-086705402_prevstill.jpeg');
+    background-size: cover;
 }
 
-.hovedbilde{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .title{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
     text-align: center;
+    margin-right: 6vw;
+}
+
+.navn{
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+.artikkel{
+    display: flex;
 }
 
 .brodtekst{
     width: 50vw;
     height: 50vh;
+    justify-content: end;
+    display: flex;
+    align-items: end    ;
+
+    
 }
 
 .underbox{
