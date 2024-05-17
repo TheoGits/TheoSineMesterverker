@@ -5,14 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discgolf Dagbladet</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Importerer Google Font */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url(Images/Image\ \(18\).jpg) ;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff; /* Lys bakgrunn */
+            padding: 10px 20px;
+            border-bottom: 1px solid #dddddd; /* Nedre kant */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lett skygge */
+        }
+
+        .navbar-left {
+            flex: 1;
+        }
+
+        .navbar-center {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        /* Stil for lenker i navbar */
+        .navbar a {
+            color: #333; /* Mørk tekst */
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Endrer farge på lenker når musepekeren er over */
+        .navbar a:hover {
+            background-color: #f0f0f0;
+            color: #000;
+        }
+
+        /* Stil for logoen */
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #3c6e47; /* Grønn farge */
+        }
+
+        /* Stil for søkefeltet */
+        .navbar-right input[type="text"] {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .left {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right {
+            width: 30%;
+        }
+
+        .navn h1 {
+            color: white;
+            font-size: 3em;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .artikkel {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+        }
+
+        .artikkel img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .title h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .brodtekst p {
+            margin: 0;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .underbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: black;
+            height: 30px;
+            width: 80vw;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
-        <a href="#home">Hjem</a>
-        <a href="#services">Nyheter</a>
-        <a href="#about">Sport</a>
-        <a href="#contact">Kultur</a>
+        <div class="navbar-left">
+            <a href="#home" class="logo">Discgolf Dagbladet</a>
+        </div>
+        <div class="navbar-center">
+            <a href="#home">Hjem</a>
+            <a href="#news">Nyheter</a>
+            <a href="#sport">Sport</a>
+            <a href="#culture">Kultur</a>
+        </div>
+        <div class="navbar-right">
+            <input type="text" placeholder="Søk...">
+            <a href="#profile">Profil</a>
+        </div>
     </div>
 
     <div class="content">
@@ -44,106 +187,3 @@
     </div>
 </body>
 </html>
-
-<style>
-/* Importerer Google Font */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-image: url('https://images.pond5.com/low-aerial-drone-flying-over-086705402_prevstill.jpeg');
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar {
-    overflow: hidden;
-    background-color: #004d00;
-    font-family: 'Roboto', sans-serif;
-    padding: 10px 0;
-}
-
-/* Stil for lenker i navbar */
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-/* Endrer farge på lenker når musepekeren er over */
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-.left {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right {
-    width: 30%;
-}
-
-.navn h1 {
-    color: white;
-    font-size: 3em;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.artikkel {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-}
-
-.artikkel img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.title h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.brodtekst p {
-    margin: 0;
-    line-height: 1.6;
-    color: #555;
-}
-
-.underbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.box {
-    background-color: black;
-    height: 30px;
-    width: 80vw;
-    border-radius: 0 0 10px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style>
