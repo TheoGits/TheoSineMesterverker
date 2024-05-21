@@ -32,7 +32,7 @@
         .navbar-center {
             flex: 2;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         .navbar-right {
@@ -76,17 +76,16 @@
             display: flex;
             justify-content: space-between;
             padding: 20px;
+            flex-wrap: wrap;
         }
 
-        .left {
-            width: 50%;
+        .left, .right {
+            flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-
-        .right {
-            width: 30%;
+            margin: 10px;
         }
 
         .navn h1 {
@@ -96,6 +95,7 @@
             background-color: rgba(0, 0, 0, 0.6);
             padding: 10px;
             border-radius: 10px;
+            margin: 0;
         }
 
         .artikkel {
@@ -104,6 +104,8 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: left;
+            width: 100%;
+            max-width: 500px;
         }
 
         .artikkel img {
@@ -124,20 +126,40 @@
             color: #555;
         }
 
-        .underbox {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-        .box {
-            background-color: black;
-            height: 30px;
-            width: 80vw;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            .navbar-center {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .navbar a {
+                padding: 10px 15px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left, .right {
+                width: 100%;
+                max-width: 600px;
+                margin: 10px 0;
+            }
+
+            .navn h1 {
+                font-size: 2em;
+            }
+
+            .artikkel {
+                width: 90%;
+                max-width: none;
+            }
         }
     </style>
 </head>
@@ -147,9 +169,9 @@
             <a href="#home" class="logo">Discgolf Dagbladet</a>
         </div>
         <div class="navbar-center">
-            <a href="#home">Hjem</a>
+            <a href="#home">Discer</a>
             <a href="#news">Nyheter</a>
-            <a href="#sport">Sport</a>
+            <a href="#sport">Baner</a>
             <a href="#culture">Kultur</a>
         </div>
         <div class="navbar-right">
