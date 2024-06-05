@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt oss</title>
+    <link rel="stylesheet" href="Kontakt.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images/Teknolia-Logo_uten_bakgrunn.png" alt="logo">
+        </div>
+        <div class="navTittel">
+            <h1>Teknolia</h1>
+        </div>
+        <div class="navUnderTittel">
+            <h2>IT-Hjelp</h2>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="omOss.html">Om oss</a></li>
+                <li><a href="Tjenester.html">Tjenester</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container main-content">
+        <h2>Vi vil gjerne høre fra deg!</h2>
+        <p>Fyll ut skjemaet nedenfor, så tar vi kontakt med deg så snart som mulig.</p>
+        <form method="post">
+            <label for="name">Navn</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-post</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Melding</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -8,6 +8,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .box{
@@ -17,6 +18,16 @@ body{
     width: 40px;
 }
 
+.blurb{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    margin-right: 300px;
+    margin-left: 300px;
+    text-align: center;
+}
 
 header {
     display: flex;
@@ -31,6 +42,20 @@ header {
     display: flex;
     height: 100px;
     width: 100px;
+}
+
+.sidebilde{
+    display: flex;
+    justify-content: end;
+    height: 40svh;
+    width: auto;
+}
+
+.nyBakgrunn{
+    background-color: white;
+    display: flex;
+    height: 100svh;
+    width: 100svw;
 }
 
 .nav-menu ul {
@@ -52,33 +77,6 @@ header {
     text-decoration: underline;
 }
 
-.search {
-    display: flex;
-    align-items: center;
-}
-
-.search input {
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 3px;
-    margin-right: 10px;
-}
-
-.search button {
-    padding: 5px 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 3px;
-    background-color: #01102f;
-    color: #fff;
-    cursor: pointer;
-}
-
-.search button:hover {
-    background-color: #7fe9ff;
-}
-
 .reviews-section {
     max-width: 800px;
     margin: 50px auto;
@@ -92,6 +90,18 @@ header {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
+}
+
+.navTittel{
+    display: flex;
+    margin-right: 220px;
+}
+
+.navUnderTittel{
+    display: flex;
+    margin-right: 420px;
+    margin-left: -280px;
+    margin-bottom: -5px;
 }
 
 .review {
@@ -128,6 +138,7 @@ header {
 }
 
 .knapp {
+    margin-left: 200px;
     width: 300px;
     height: 75px;
     background-color: #7fe9ff ;
@@ -135,7 +146,8 @@ header {
     border-radius: 15px;
     position: relative;
     bottom: 0;
-    transition: all 0.2s ease-out;
+    transition: all .2s ease-out;
+    
 }
 
 .knapp:hover {
@@ -144,21 +156,4 @@ header {
     cursor: pointer;
     color: white;
 }
-
-.bilde{
-    border-radius: 10px;
-    width: 40svw;
-    height: 50svh;
-    background-color: black;
-    margin-left: 5svh;
-}
-
-#bilde1{
-    display: flex;
-    margin-left: 55svw;
-    border-radius: 10px;
-    width: 40svw;
-    height: 50svh;
-}
-
 

@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const cors = require("cors")
 const Formdata = require('./models/Formdata.js');
 const { error } = require('console');
 const { title } = require('process');
@@ -10,6 +11,7 @@ const app = express();
 const port = 3000;
 
 // Middleware
+app.use(cors({origin: "*"}))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
