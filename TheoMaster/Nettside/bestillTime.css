@@ -1,0 +1,123 @@
+body{
+    background-color: #01102f;
+    color: #7fe9ff;
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    display: flex;
+    background-color: #7fe9ff;
+    height: 4px;
+    width: 40px;
+}
+
+.blurb{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    margin-right: 300px;
+    margin-left: 300px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #01102f;
+    color: #fff;
+}
+
+.logo{
+    display: flex;
+    height: 100px;
+    width: 100px;
+}
+
+.sidebilde{
+    display: flex;
+    justify-content: end;
+    height: 40svh;
+    width: auto;
+}
+
+.nyBakgrunn{
+    background-color: white;
+    display: flex;
+    height: 100svh;
+    width: 100svw;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 300px;
+    height: 75px;
+    background-color: #7fe9ff ;
+    border: 0px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 0;
+    transition: all .2s ease-out;
+    
+}
+
+button:hover {
+    background-color: #2e4d89;
+    cursor: pointer;
+    color: white;
+}
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#textbox1{
+    height: 10svh;
+    width: 60svw;
+}
+
+#textbox2{
+    height: 30svh;
+    width: 60svw;
+}
+
+#textbox3{
+    height: 20svh;
+    width: 60svw;
+}
+
+#tid{
+    height: 10svh;
+    width: 40svw;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bestillTime.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Images/Teknolia-Logo_uten_bakgrunn.png" alt="logo">
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="omOss.html">Om oss</a></li>
+                <li><a href="Tjenester.html">Tjenester</a></li>
+                <li><a href="Kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container2">
+        <input type="text" id="textbox1" placeholder="Tittel...">
+        <br>
+        <input type="text" id="textbox2" placeholder="beskrivelse">
+        <br>
+        <input type="text" id="textbox3" placeholder="relevant info">
+        <br>
+        <input type="datetime-local" id="tid" placeholder="00.00.00 kl 00:00">
+        <br>
+        <button id="saveButton">send</button>
+    </div>
+    <br><br><br><br><br><br>
+    <script>
+        document.getElementById('saveButton').addEventListener('click', function() {
+          const tittel = document.getElementById('textbox1').value;
+          const beskrivelse = document.getElementById('textbox2').value;
+          const relevantInfo = document.getElementById('textbox3').value;
+          const tid = document.getElementById('tid').value;
+    
+          fetch('http://localhost:3000/submit', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ tittel: tittel, beskrivelse: beskrivelse, relevantInfo : relevantInfo, tid : tid })
+          })
+          .then(response => response.text())
+          .then(data => alert(data))
+          .catch(error => console.error('Error:', error));
+        });
+      </script>
+
+
+</body>
+</html>
