@@ -19,7 +19,7 @@ body{
 }
 
 .blurb{
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,6 +27,7 @@ body{
     margin-right: 300px;
     margin-left: 300px;
     text-align: center;
+    margin-bottom: -30svh;
 }
 
 header {
@@ -155,5 +156,18 @@ header {
     background-color: #2e4d89;
     cursor: pointer;
     color: white;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 70svh;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
